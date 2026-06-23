@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Management</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-page" id="loginPage">
+    <div class="login-box">
+        <h2>🍽 Restaurant Login</h2>
+
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+        <p>Username: admin</p>
+        <p>Password: 12345</p>
+    </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="dashboard" id="dashboard">
+
+    <aside>
+        <h2>🍴 RestoranKu</h2>
+
+        <ul>
+            <li onclick="showPage('dashboard-content')">Dashboard</li>
+            <li onclick="showPage('menu-content')">Menu Makanan</li>
+            <li onclick="logout()">Logout</li>
+        </ul>
+    </aside>
+
+    <main>
+
+        <div id="dashboard-content">
+
+            <h1>Dashboard</h1>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Menu</h3>
+                    <p id="totalMenu">3</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Pesanan</h3>
+                    <p>125</p>
+                </div>
+
+                <div class="card">
+                    <h3>Pendapatan</h3>
+                    <p>Rp 12.500.000</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="menu-content" style="display:none">
+
+            <h1>Menu Makanan</h1>
+
+            <div class="form-menu">
+                <input type="text" id="foodName" placeholder="Nama Makanan">
+                <input type="text" id="foodPrice" placeholder="Harga">
+                <button onclick="addMenu()">Tambah Menu</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=500" alt="">
+                    <h3>Pizza</h3>
+                    <p>Rp 75.000</p>
+                </div>
+
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="">
+                    <h3>Burger</h3>
+                    <p>Rp 40.000</p>
+                </div>
+
+                <div class="food-card">
+                    <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?w=500" alt="">
+                    <h3>Steak</h3>
+                    <p>Rp 95.000</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
